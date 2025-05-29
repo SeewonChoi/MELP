@@ -10,7 +10,7 @@
 ![](docs/framework.png)
 
 ## Updates
-- 20/11/2024: The first version of MELP code base is now alive.
+- 29/05/2025: The first version of MELP code base is now alive.
 
 ## Installation 
 
