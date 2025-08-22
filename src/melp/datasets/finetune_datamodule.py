@@ -4,7 +4,7 @@ import pandas as pd
 from torch.utils.data import DataLoader
 from lightning import LightningDataModule
 from melp.datasets.finetune_dataset import ECGDataset
-from melp.paths import SPLIT_DIR, RAW_DATA_PATH, PROCESSED_DATA_PATH
+from melp.paths import SPLIT_DIR, RAW_DATA_PATH
 
 
 class ECGDataModule(LightningDataModule):

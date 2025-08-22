@@ -175,3 +175,5 @@ cython_debug/
 
 logs/
 mimic-iv-ecg/
+data
+fairseq-signals

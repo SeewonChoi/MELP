@@ -1,0 +1,16 @@
+wfdb
+scikit-learn
+transformers
+einops
+timm
+neurokit2
+h5py
+ipdb
+omegaconf
+hydra-core
+pot
+wandb
+
+pip install git+https://github.com/katsura-jp/pytorch-cosine-annealing-with-warmup@12d03c07553aedd3d9e9155e2b3e31ce8c64081a
+
+pip install git+https://github.com/fuying-wang/fairseq-signals

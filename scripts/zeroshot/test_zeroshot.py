@@ -268,13 +268,13 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model_name', type=str, default='merl')
+    parser.add_argument('--model_name', type=str, default='melp')
     parser.add_argument('--ckpt_path', type=str, 
                         default='')
     parser.add_argument('--test_sets', type=str, nargs='+', 
                         # default=["ptbxl_super_class", "ptbxl_sub_class", "ptbxl_form", "ptbxl_rhythm"])
-                        default=["ptbxl_rhythm", "ptbxl_form", "ptbxl_sub_class", "ptbxl_super_class",  
-                                "icbeb", "chapman"])
+                        default=["ptbxl_rhythm"]) # 
+                        # "ptbxl_form", "ptbxl_sub_class", "ptbxl_super_class",  "icbeb", "chapman"
                         # default=["ptbxl_super_class", "icbeb", "chapman"])
     parser.add_argument('--batch_size', type=int, default=128)
     parser.add_argument('--num_workers', type=int, default=4)

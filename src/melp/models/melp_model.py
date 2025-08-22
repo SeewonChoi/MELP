@@ -471,9 +471,10 @@ class MELPModel(MERLModel):
     @torch.no_grad()
     def get_text_emb(self, input_ids, attention_mask):
         if self.text_encoder_name in ["ncbi/MedCPT-Query-Encoder", "*/heart_bert"]:
-            text_output = self.lm_model(input_ids=input_ids, attention_mask=attention_mask)
+            text_output = self.lm_model(input_ids=input_ids, attention_mask=attention_mask, 
+                                        output_hidden_states=True)
             # using the CLS token as the global embedding
-            text_emb = text_output.last_hidden_state[:, -1]
+            text_emb = text_output.hidden_states[-1][:, -1]
         else:
             raise NotImplementedError
 

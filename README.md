@@ -46,7 +46,7 @@ ECG:
 
 ```
 cd scripts/pretrain
-CUDA_VISIBLE_DEVICES=0,1,2,3 python main_pretrain.py --num_devices 4 --train_data_pct 1 \
+CUDA_VISIBLE_DEVICES=0,1,2 python main_pretrain.py --num_devices 3 --train_data_pct 1 \
     --text_encoder_name fuyingw/heart_bert \
     --lr 2e-4 --model_name melp --batch_size 64 --max_epochs 100 \
     --ecg_encoder_name ecgfm \
@@ -60,7 +60,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python main_pretrain.py --num_devices 4 --train_dat
 ```
 cd scripts/finetune
 CUDA_VISIBLE_DEVICES=0 python main_finetune.py \
-    --model_name melp --dataset_name icbeb \
+    --model_name melp --dataset_name ptbxl_super_class \
     --train_data_pct 0.01 \
     --ckpt_path CKPT_PATH \
     --num_devices 1

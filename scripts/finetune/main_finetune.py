@@ -19,7 +19,6 @@ from melp.models.melp_model import MELPModel
 from melp.models.ssl_finetuner import SSLFineTuner
 from melp.paths import ROOT_PATH as REPO_ROOT_DIR
 from melp.paths import RAW_DATA_PATH
-from melp.paths import VQNSP_CKPT_PATH
 
 warnings.filterwarnings("ignore")
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
