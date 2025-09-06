@@ -16,7 +16,7 @@ from melp.datasets.pretrain_datamodule import ECGTextDataModule
 from melp.models.merl_model import MERLModel
 from melp.models.ecgfm_model import ECGFMModel
 from melp.models.melp_model import MELPModel
-from melp.models.kardianet_model import KardiaNetModel
+from melp.models.kardia_model import KardiaNetModel
 from melp.paths import ROOT_PATH as REPO_ROOT_DIR
 from melp.paths import RAW_DATA_PATH
 
@@ -142,15 +142,15 @@ if __name__ == '__main__':
     parser.add_argument("--accumulate_grad_batches", type=int, default=1)
     parser.add_argument("--lr", type=float, default=1e-4)
     parser.add_argument("--ecg_encoder_name", type=str, default="ecgfm")
-    parser.add_argument("--ecg_encoder_weight", type=str, default="")
-    parser.add_argument("--text_encoder_name", type=str, default="google/flan-t5-small")
+    parser.add_argument("--ecg_encoder_weight", type=str, default='') # /home/mkeoliya/MELP/data/model.safetensors"
+    parser.add_argument("--text_encoder_name", type=str, default="google/gemma-3-1b-it") #"google/gemma-3-1b-it", fuyingw/heart_bert
     parser.add_argument("--clip_loss_weight", type=float, default=1.)
     parser.add_argument("--caption_loss_weight", type=float, default=1.)
     parser.add_argument("--local_loss_weight", type=float, default=1.)
     parser.add_argument("--n_queries_contrast", type=int, default=12)
+    parser.add_argument("--in_features", type=int, default=256)
     parser.add_argument("--val_dataset_list", type=str, nargs="+", 
-                        default=["ptbxl_super_class", "ptbxl_sub_class", "ptbxl_form", "ptbxl_rhythm", 
-                                  "icbeb", "chapman"])
+                        default=[])
 
     hparams = parser.parse_args()
 

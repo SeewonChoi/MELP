@@ -122,7 +122,7 @@ if __name__ == '__main__':
     parser.add_argument("--num_devices", type=int, default=1)
     parser.add_argument("--max_epochs", type=int, default=100)
     parser.add_argument("--accumulate_grad_batches", type=int, default=1)
-    parser.add_argument("--ckpt_path", type=str, default="/home/seewon/MELP/data/model.safetensors")
+    parser.add_argument("--ckpt_path", type=str, default="/home/mkeoliya/MELP/data/model.safetensors")
     parser.add_argument("--lr", type=float, default=1e-3)
     parser.add_argument("--in_features", type=int, default=256)
     parser.add_argument("--ecg_encoder_name", type=str, default="ecgfm")

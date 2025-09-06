@@ -158,7 +158,7 @@ class MERLModel(BasePretrainModel):
 
         return tokenizer_output
     
-    def encode_ecg(self, ecg):
+    def encode_ecg(self, ecg, normalize=True, proj_contrast=True):
         # (bz, 12, 5000) -> (bz, 512, 313)
         ecg_emb = self.ecg_encoder(ecg)
         if 'resnet' in self.ecg_encoder_name:

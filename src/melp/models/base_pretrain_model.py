@@ -3,7 +3,7 @@ import torch
 import torch.nn as nn
 from lightning import LightningModule
 from timm.optim import create_optimizer_v2
-from cosine_annealing_warmup import CosineAnnealingWarmupRestarts
+# from cosine_annealing_warmup import CosineAnnealingWarmupRestarts
 
 
 class BasePretrainModel(LightningModule):

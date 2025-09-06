@@ -8,7 +8,7 @@ Contributions:
 from typing import List, Optional
 from dataclasses import dataclass
 import numpy as np
-import ot
+# import ot
 import ipdb
 import torch
 import torch.nn as nn
@@ -470,7 +470,7 @@ class MELPModel(MERLModel):
         
     @torch.no_grad()
     def get_text_emb(self, input_ids, attention_mask):
-        if self.text_encoder_name in ["ncbi/MedCPT-Query-Encoder", "*/heart_bert"]:
+        if self.text_encoder_name in ["ncbi/MedCPT-Query-Encoder", "fuyingw/heart_bert"]:
             text_output = self.lm_model(input_ids=input_ids, attention_mask=attention_mask, 
                                         output_hidden_states=True)
             # using the CLS token as the global embedding
